@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Administrador de Películas</title>
+        <link rel="shortcut icon" href="" type="image/x-icon">
+        <link rel="stylesheet" href="../styles/styles.css"">
+    </head>
+    <body>
+        <header class="backHeader">
+            <nav>
+                <ul class="textoDeco">
+                    <a class="textoDeco" href="">
+                        <img class="" src="" alt="" loading="lazy">
+                        <span class="">CAC-MOVIES</span>
+                    </a>
+                    
+                    <li class="textoDeco">
+                        <a  class="textoDeco" href="">Tendencias</a>
+                    </li>
+                    <li class="textoDeco">
+                        <a class="textoDeco" href="">Registrarse</a>
+                    </li>
+                    <li class="textoDeco">
+                        <a class="textoDeco" href="">Iniciar Sesión</a>
+                    </li>
+                
+                </ul>
+                
+            </nav>
+        </header>
+        <main class="colorAdmin">
+            <section>
+                <h1 class="gestionTexto">Gestión de Películas</h1>
+                <p class="textoCargar">En esta sección podrás cargar nuevas películas al portal.</p>
+                <form action="" method="post">
+                    <section class="elementosForm">
+                   <div>
+                        <p class="textoForm">Título</p>
+                       <input class="inputOne" type="text" name="titulo" id="titulo" required>
+                   </div>
+                   <div>
+                        <p class="textoForm">Fecha de Lanzamiento</p>
+                        <input class="inputTwo" type="date" name="fechaLanzamiento" id="fechaLanzamiento" required>
+                    </div>
+                    <div>
+                        <p class="textoForm">Genero</p>
+                        <input class="inputTwo" type="text" name="genero" id="genero" required>
+                    </div>
+                    <div>
+                        <p class="textoForm">Duración</p>
+                        <input class="inputTwo" type="text" name="duracion" id="duracion" required>
+                    </div>
+                    </section>
+                    <section class="elementosForm">
+                    <div>
+                        <p class="textoForm">Director</p>
+                        <input class="inputOne" type="text" name="director" id="director" required>
+                    </div>
+                    <div>
+                        <p class="textoForm">Reparto</p>
+                        <input class="inputThree" type="text" name="reparto" id="reparto" required>
+                    </div>
+                    </section>
+                    <section class="elementosForm">
+                    <div>
+                        <p class="textoForm">Sinopsis</p>
+                        <input class="inputFour" type="text" name="sinopsis" id="sinopsis" required>
+                    </div>
+                    </section>
+                    <section class="elementosForm">
+                   <div>
+                        <p class="textoForm">Imagen</p>
+                       <input class="textoImagen" type="file" name="imagen" id="imagen" accept="image/*" required>
+                   </div>
+                   </section>
+                   <section>
+                   <div>
+                       <input class="botonAgregar" type="submit" value="Agregar Película">
+                   </div>
+                   </section>
+                </form>
+                <div>
+                    <hr class="barraDivisora">
+                </div>
+                <h1 class="gestionTexto">Listado de Películas</h1>
+                <p class="textoCargar">Para ver todos los datos de las películas, elija una y toque modificar.</p>
+                <div class="modificacionesTable">
+                <table>
+                    <tbody>
+                    <tr class="modificacionTabla">
+                        <th>Título</th>
+                        <th>Género</th>
+                        <th>Imagen</th>
+                        <th>Acciones</th>
+                    </tr>
+                    <tr class="modificacionS">
+                        <td>Harry Potter</td>
+                        <td>Fantasía</td>
+                        <td><img src="" alt="Harry Potter"></td>
+                        <td>
+                            <button>Modificar</button>
+                            <button>Eliminar</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                </div>
+            </section>
+
+        </main> 
+        <footer class="footer">
+           <div class="footer_items">
+                <a href="#">Términos y condiciones</a>
+                <a href="#">Preguntas frecuentes</a>
+                <a href="#">Ayuda</a>
+            </div>
+        </footer>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+        <script src="../js/agregar_pelicula.js"></script>
+        <script src="../js/valida_pelicula.js"></script>
+        <script src="../js/traer_peliculas.js"></script>
+    </body>
+</html>
+

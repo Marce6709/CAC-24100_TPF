@@ -1,0 +1,1197 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    font-size: 16px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    box-sizing: border-box;
+    background-color: var(--fondo-negro);
+
+/* COLORES */
+    --tamanio: 25px;
+    --texto-blanco: #ffffff;
+    --color-primario: #9f3647;
+    --fondo-negro: #0a0a0a;
+    --gris: #808080;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+.icon-container {
+    display: inline-block;
+    padding: 20px;
+}
+
+.icon-container i {
+    font-size: 24px;
+    transition: transform 0.5s ease;
+}
+
+.icon-container:hover i {
+    animation: shake 0.5s ease-in-out infinite;
+}
+@keyframes shake {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(10deg); }
+    50% { transform: rotate(-10deg); }
+    75% { transform: rotate(10deg); }
+    100% { transform: rotate(0deg); }
+}
+.header {
+    background-color: var(--color-primario);
+    width: 100VW;
+    box-sizing: border-box;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+}
+.header_logo {
+    display: inline-block;
+    width: 40vw;
+    margin-left: 35px;
+}
+.header_logo h3 {
+    display: inline;
+    font-weight: 100;
+}
+.header_menu {
+    padding-left: 4vw;
+    display: flex;
+    width: 50vw;
+    justify-content: flex-end;
+}
+
+.header_menu a {
+    text-decoration: none;
+    color: var(--texto-blanco);
+    display: inline-block;
+    font-size: .9em;
+    padding: 10px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.header_menu a:hover {
+    background-color: var(--color-primario);
+    background-origin: inherit;
+    box-shadow: 1px 1px 1px 1px var(--fondo-negro);
+}
+
+.fondoNegro {
+    background-color: var(--fondo-negro);
+}
+
+.ubuntu-regular {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.ubuntu-bold {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.ubuntu-regular-italic {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.ubuntu-bold-italic {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.textoBlanco {
+    color: var(--texto-blanco);
+}
+/*Moooooooooooooooobile 1st*/
+.main {
+    background-image: linear-gradient(to right top, #4e4b4b8a, #0000008a), url(../imgs/banner-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 75vh/*px|vh|vw|%*/;
+    width: 100vw;/*relativo al viewport*/
+    padding: 20px;
+    display: flex; /* se va a row */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+}
+.main h1 {
+    font-size: 3rem;/*3 * 16px*/
+    padding-top: 5vh;
+}
+
+.main h2 {
+    font-size: 2rem;
+    padding-top: 5vh;
+    font-weight: 300;
+}
+
+.main button{
+    width: 10vw;
+    min-width: 20vw;
+    /*TODO:max-width: 25vw; ver que pasa!*/
+    height: 10vh;
+    min-height: 50PX;
+    margin-top: 5vh;
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+    font-weight: 700;
+    background-color: #9f3647;
+}
+
+header {
+    font-size: 19px;
+}
+
+h2 {
+    font-size: 2.1rem; /*16px * 1.17*/
+}
+
+/*estilos formulario de busqueda de peliculas*/
+.form-busqueda {
+    background-color: var(--fondo-negro);
+    color: var(--texto-blanco);
+    height: 50vh;
+    padding-top: 15vh;
+    text-align: center;
+}
+/*selectores avanzados*/
+.form-busqueda h2{
+    font-size: 2rem;
+}
+.form-busqueda form {
+    margin-top: 5vh;
+    margin-bottom: 15vh;
+}
+.form-busqueda form input {
+    border-radius: 20px;
+    padding: 10px 10px;
+    border: none;
+    color: var(--gris);
+    outline: none;
+    width: 50vw;
+}
+.form-busqueda form button {
+    border-radius: 20px;
+    padding: 10px 10px;
+    min-width: 10vw;
+    border: 2px solid var(--texto-blanco);
+    background-color: var(--color-primario);
+    color: var(--texto-blanco);
+    margin-left: 1vw;
+}
+.form-busqueda hr {
+    width: 70vw;
+    margin: 0 auto;/*una forma de center*/
+    border: 1px solid var(--color-primario)
+}
+/*efecto cuando pasamos sobre el boton*/
+.form-busqueda form button:hover {
+    width: 10.5vw;
+}
+
+#goBack {
+    position: fixed;
+    bottom: 10px;
+    right: 15px;
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 9999;
+    color: var(--texto-blanco);
+}
+html {
+    scroll-behavior: smooth;
+    scroll-behavior: smooth;
+    transition-duration: 1.5s; /* Duración de la transición */
+  }
+
+@media screen and (min-width: 1200px){
+    .header{
+        flex-direction: row-reverse;
+        /* background-color: var(--gris); */
+    }
+}
+@media screen and (min-width: 1200px){
+    .header{
+        flex-direction: row;
+    }
+}
+@media (min-width: 600px) and (max-width: 1024px) {
+    .container {
+        width: 90%;
+    }
+}
+.flex{
+    background-color: var(--color-primario);
+    color: var(--gris);
+    display: flex;
+    min-height: 150px;
+    /* lo centra en el eje main */
+    justify-content: center;
+    /* lo centra en el eje cross */
+    align-items: flex-end;
+}
+
+
+/*TENDENCIASSS*/
+
+.peliculasTendencia{
+    width:80%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10px;
+    .tituloSection{
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-top:50px;
+        margin-bottom: 40px;
+        color: var(--texto-blanco);
+    }
+    .peliculas{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap:60px;
+        a{
+            text-decoration: none;
+            color: #ffffff;
+            .pelicula{
+                width:200px;
+                height: 300px;
+                position: relative;
+                overflow: hidden;
+                border-radius: 10px;
+                transition: all 0.5s ease;
+            
+                .imgTendencia{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 10px;
+                
+                }
+            
+                .tituloPelicula{
+                    z-index: 2;
+                    position: absolute;
+                    text-align: center;
+                    top: 50%;
+                    left: 50%;
+                    max-width: 20rem;
+                    width: 100%;
+                    transform: translateY(-50%) translateX(-50%);
+                    h4 {
+                        font-size: 1.6rem;
+                        font-weight: bold;
+                        opacity: 0;
+                        margin-bottom: 0.5rem;
+                        letter-spacing: 0.1rem;
+                        transition: opacity 0.5s ease-in-out;
+
+                    }
+                }
+                &:hover{
+                box-shadow: 0 0 30px #d2c2c4cd;
+                transform: scale(0.9);
+                
+                }
+                &:hover .tituloPelicula{
+                    width: 100%;
+                    height: 100%;
+                    backdrop-filter: blur(20px);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                &:hover h4 {
+                    width: 100%;
+                    padding: 0.5rem;
+                    opacity: 1;
+                }
+            
+            }
+        }
+    
+    }
+    .boton{
+        border: 1px solid rgb(0, 0, 0);
+        box-sizing: content-box;
+        margin-top:10px;
+        margin-left:10px;
+        background-color:var(--color-primario);
+        color: var(--texto-blanco);
+        padding: 1rem 1rem;
+        border-radius: 5px;
+        font-size: 1rem;
+        font-weight: 500;
+        text-decoration: none;
+        margin-bottom:60px;
+        width: 100px;
+        height: 60px;
+         /* Agregar efecto de botón presionado */
+         transition: transform 0.3s, box-shadow 0.3s;
+         &:hover {
+             background-color: var(--color-primario);
+             transform: scale(0.95);
+             box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+         }
+    }
+}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* media query */
+:root {
+    font-size: 16px;
+    /*defino la fuente general*/
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    box-sizing: border-box;
+    background-color: var(--fondo-negro);
+
+
+    /*definir variables!!!*/
+    --tamanio: 25px;
+    --texto-blanco: #ffffff;
+    --color-primario: #9f3647;
+    --fondo-negro: #0a0a0a;
+
+    /*gris*/
+    --gris: #808080;
+}
+
+* {
+    /* modelo de caja */
+    margin: 0;
+    padding: 0;
+    /**/
+}
+.icon-container {
+    display: inline-block;
+    padding: 20px;
+}
+
+.icon-container i {
+    font-size: 24px;
+    transition: transform 0.5s ease;
+}
+
+/* Animación */
+.icon-container:hover i {
+    animation: shake 0.5s ease-in-out infinite;
+}
+@keyframes shake {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(10deg); }
+    50% { transform: rotate(-10deg); }
+    75% { transform: rotate(10deg); }
+    100% { transform: rotate(0deg); }
+}
+.header {
+    background-color: var(--color-primario);
+    width: 100vw;
+    box-sizing: border-box;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    font-size: 19px;
+}
+.header_logo {
+    display: inline-block;
+    width: 40vw;
+    margin-left: 35px;
+}
+.header_logo h3 {
+    display: inline;
+    font-weight: 100;
+}
+.header_menu {
+    padding-left: 4vw;
+    display: flex;
+    width: 50vw;
+    justify-content: flex-end;
+}
+
+.header_menu a {
+    text-decoration: none;
+    color: var(--texto-blanco);
+    display: inline-block;
+    font-size: .9em;
+    padding: 10px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-right: 20px; /* incremento el espaciado entre los botones*/
+}
+
+.header_menu a:hover {
+    background-color: var(--color-primario);
+    background-origin: inherit;
+    box-shadow: 1px 1px 1px 1px var(--fondo-negro);
+}
+
+.fondoNegro {
+    background-color: var(--fondo-negro);
+}
+
+.ubuntu-regular {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.ubuntu-bold {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.ubuntu-regular-italic {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.ubuntu-bold-italic {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.textoBlanco {
+    color: var(--texto-blanco);
+}
+/*Moooooooooooooooobile 1st*/
+.main {
+    background-image: linear-gradient(to right top, #4e4b4b8a, #0000008a), url(../imgs/banner-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 75vh/*px|vh|vw|%*/;
+    width: 100vw;/*relativo al viewport*/
+    padding: 20px;
+    display: flex; /* se va a row */
+    flex-direction: column;
+    align-items: center;
+
+}
+.main h1 {
+    font-size: 3rem;/*3 * 16px*/
+    padding-top: 5vh;
+}
+
+.main h2 {
+    font-size: 2rem;
+    padding-top: 5vh;
+    font-weight: 300;
+}
+
+.main button{
+    width: 10vw;
+    min-width: 20vw;
+    /*TODO:max-width: 25vw; ver que pasa!*/
+    height: 10vh;
+    min-height: 50PX;
+    margin-top: 5vh;
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+    font-weight: 700;
+    background-color: #9f3647;
+}
+
+.main button {
+    font-size: 24px; /* Ajusto el tamaño del boton registrarse */
+}
+
+.main button.textoBlanco {
+    font-size: 30px; /* Hago mas largo el tamaño del fondo de Registrarse" */
+}
+
+
+
+h2 {
+    font-size: 1.17em; /*16px * 1.17*/
+}
+
+/*estilos formulario de busqueda de peliculas*/
+.form-busqueda {
+    background-color: var(--fondo-negro);
+    color: var(--texto-blanco);
+    height: 10vh;
+    padding-top: 15vh;
+    text-align: center;
+    padding-bottom: 20vh;
+
+}
+/*selectores avanzados*/
+.form-busqueda h2{
+    font-size: 2rem;
+}
+
+.form-busqueda form input {
+    border-radius: 20px;
+    padding: 10px 10px;
+    border: none;
+    color: var(--gris);
+    outline: none;
+    width: 50vw;
+}
+.form-busqueda form button {
+    border-radius: 20px;
+    padding: 10px 10px;
+    min-width: 10vw;
+    border: 2px solid var(--texto-blanco);
+    background-color: var(--color-primario);
+    color: var(--texto-blanco);
+    margin-left: 1vw;
+}
+hr{
+    width: 70vw;
+    margin: 0 auto;
+    border: 1px solid var(--color-primario)
+} 
+/*efecto cuando pasamos sobre el boton*/
+.form-busqueda form button:hover {
+    width: 10.5vw;
+}
+
+#goBack {
+    position: fixed;
+    bottom: 10px;
+    right: 15px;
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 9999;
+    color: var(--texto-blanco);
+}
+html {
+    scroll-behavior: smooth;
+    scroll-behavior: smooth;
+    transition-duration: 1.5s; 
+  }
+
+
+
+@media (min-width: 600px) and (max-width: 1024px) {
+    .container {
+        width: 90%;
+    }
+}
+
+/*TENDENCIASSS*/
+/*
+.peliculasTendencia {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.peliculas {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 60px;
+}
+
+.peliculas a {
+    text-decoration: none;
+    color: var(--texto-blanco);
+}
+
+.pelicula {
+    width: 200px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+}
+
+.pelicula:hover {
+    box-shadow: 0 0 30px var(--color-primario);
+    transform: scale(0.9);
+
+}
+
+.imgTendencia {
+    width: 100%;
+}
+
+.tituloPelicula {
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.9s ease;
+
+
+}
+
+.pelicula:hover .tituloPelicula {
+    opacity: 1;
+
+}
+
+.pelicula::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    filter: blur(10px);
+    z-index: 1;
+    transition: filter 0.5s ease;
+}
+
+.pelicula:hover::before {
+    filter: blur(10px);
+}
+h2{
+    color: var(--texto-blanco);
+    font-size: 2.1em;
+    padding: 5vh;
+}
+.botones{
+    background-color: var(--fondo);
+    color: var(--primario);
+    display: inline-flex;
+    justify-content: space-evenly;
+    align-content: center;
+    width: 60%;
+    margin: auto;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+
+.boton{
+    width: 100px;
+    height: 60px;
+    color: var(--texto-blanco);
+    background-color: var(--color-primario);
+    font-size: 1.2rem;
+    border-color: var(--texto-blanco);
+    padding: 2;
+    border-radius: 10px;
+    
+    
+}
+*/
+/* DESTACADAS */
+.destacadas{
+    padding-top: 10px;
+    width: 100%;
+    background-color: var(--fondo);
+    padding-bottom: 5vh;
+
+}
+
+.destacadas h2{
+    color: var(--texto-blanco);
+    text-align: center;
+    padding-bottom: 5vh;
+    font-size: 2.1rem;
+    padding-top: 20vh;
+}
+
+.contenedorscroll{
+    display: flex;
+    justify-content: space-around;
+}
+
+.lista img{
+    border-radius: 200px;
+    padding: 15px
+}
+
+.lista{
+    display:flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    width: 75%;
+    height: 50vh;
+    padding: 3vw;
+    justify-content:space-evenly
+}
+
+.lista::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.lista::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+.lista::-webkit-scrollbar-thumb {
+    background-color: var(--color-primario);
+}
+
+
+
+ /* footer */
+ .footer{
+    background-color: var(--color-primario);
+    padding-top: 20px;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+.footer_items a{
+    color: var(--texto-blanco);
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+
+/* ---------- Registro ---------- */
+
+.bodyRegistro{
+    background: linear-gradient(#ffffff83,#ffffff83), url(./../assets/img/img3.jpg);
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: auto;
+    .mainRegistro{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .sectionRegistro{
+        background-color: var(--text-color);
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        border-radius: 15px;
+        justify-content: center;
+        align-items: center;
+        width: 30%;
+        padding: 10px;
+        h1{
+            color: var(--dark-color);
+        }
+        .formRegistro{
+            color: white;
+            div{
+                margin-bottom: 10px;
+            }
+            .input{
+                border-style: none;
+                border-radius: 10px;
+                padding: 10px;
+                width: 100%;
+            }
+            .submit{
+                width: 100%;
+                border-radius: 10px;
+                padding: 8px 20px;
+                color: white;
+                background-color: var(--dark-color);
+                border: none;
+                font-size: 1rem;
+            }
+            .select{
+                border-radius: 10px;
+                width: 100%;
+                padding: 10px;
+            }
+            .terminos{
+                display: flex;
+                justify-content: flex-start;
+                gap: 20px;
+            }
+        }
+    }
+}
+
+/*@media only screen and (max-width:1023px) and (min-width:768px){
+    .bodyRegistro{
+        .sectionRegistro{
+            width: 60%;
+        }
+    }
+}*/
+
+@media only screen and (max-width:600px){
+    .bodyRegistro{
+        .sectionRegistro{
+            width: 80%;
+        }
+    }
+}
+
+
+/* ---------- Login ---------- */
+
+.bodyLogin{
+    background: linear-gradient(#ffffff83,#ffffff83), url(./../assets/img/img3.jpg);
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: auto;
+    .mainLogin{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .sectionLogin{
+        background-color: var(--text-color);
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+        border-radius: 15px;
+        justify-content: center;
+        align-items: center;
+        width: 30%;
+        padding: 80px 20px;
+        h1{
+            color: var(--dark-color);
+            text-align: center;
+        }
+        .formLogin{
+            width: 80%;
+            color: white;
+            div{
+                margin-bottom: 10px;
+            }
+            .input{
+                width: 100%;
+                border-style: none;
+                border-radius: 10px;
+                padding: 10px;
+            }
+            .submit{
+                width: 100%;
+                border-radius: 10px;
+                padding: 8px 20px;
+                color: white;
+                background-color: var(--dark-color);
+                border: none;
+                font-size: 1rem;
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+/*@media only screen and (max-width:1023px) and (min-width:768px){
+    .bodyLogin{
+        .sectionLogin{
+            width: 60%;
+        }
+    }
+}*/
+
+@media only screen and (max-width:600px){
+    .bodyLogin{
+        .sectionLogin{
+            width: 80%;
+        }
+    }
+}
+
+.error-message {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.bodyRegistro{
+    .sectionRegistro{
+        .formRegistro{
+            .is-valid{
+                border-radius: 10px;
+                border-left: 10px solid rgb(128, 0, 0);
+            }
+        }
+    }
+}
+
+.bodyRegistro{
+    .sectionRegistro{
+        .formRegistro{
+            .is-invalid{
+                border-radius: 10px;
+                border-left: 10px solid red;
+            }
+        }
+    }
+}
+
+.bodyLogin{
+    .sectionLogin{
+        .formLogin{
+            .is-valid{
+                border-radius: 10px;
+                border-left: 10px solid rgb(128, 0, 0);
+            }
+        }
+    }
+}
+
+.bodyLogin{
+    .sectionLogin{
+        .formLogin{
+            .is-invalid{
+                border-radius: 10px;
+                border-left: 10px solid red;
+            }
+        }
+    }
+}
+
+#clima{
+    width: 100%;
+    background-color: var();
+    font-size: 1.2rem;
+    .ul{
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+@media only screen and (max-width:600px){
+    #clima{
+        display: none;
+    }
+}
+
+
+/*--------Stylo para API-------*/
+
+.contenedor {
+	width: 90%;
+	max-width: 1000px;
+	margin: 40px auto 100px auto;
+
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 40px;
+}
+
+.contenedor .pelicula {
+	text-align: center;
+}
+
+.contenedor .pelicula .titulo {
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.contenedor .pelicula .poster {
+	width: 100%;
+	margin-bottom: 10px;
+	border-radius: 15px;
+}
+
+.paginacion {
+	position: fixed;
+	bottom: 0;
+	background: #100a1f;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	padding: 10px;
+}
+
+.paginacion button {
+	cursor: pointer;
+	border: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	height: 50px;
+	width: 200px;
+	background: #241744;
+	color: #fff;
+	border-radius: 100px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+	transition: .3s ease all;
+}
+
+.paginacion button:hover {
+	background: #c83131;
+}
+
+/*Administrador*/
+*{ 
+    margin: 0;
+    padding: 0;
+}
+/*Color de fondo de la página, eliminar y remplazar con css de proyecto */
+.colorAdmin{
+    background-color: black;
+    background-size: cover;
+}
+.textoDeco{
+    text-decoration: none;
+    list-style: none;
+    color: rgb(255, 255, 255);
+    display: inline;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 5px;
+}
+.backHeader{
+    background-color: #9f3647;
+    height: 10vh;
+}
+/*Css que se debe mantener*/
+.gestionTexto{
+    color: #ffffff;
+    padding-top: 20px;
+    padding-left: 70px;
+    padding-bottom: 13px;
+    font-size: 2rem;
+}
+.textoCargar{
+    color: #ffffff;
+    padding-left: 70px;
+    padding-bottom: 16px;
+}
+.textoForm{
+    color: #ffffff;
+    padding-bottom: 7px;
+    padding-top: 10px;
+}
+.elementosForm{
+    display: flex;
+    padding-left: 70px;
+    gap: 20px;
+}
+.inputOne{
+    width: 350px;
+    height: 28px;
+}
+.inputTwo{
+    width: 240px;
+    height: 28px;
+}
+.inputThree{
+    width: 768px;
+    height: 28px;
+}
+.inputFour{
+    width: 1142px;
+    height: 70px;
+}
+.textoImagen{
+    color: #ffffff;
+}
+.botonAgregar{
+    margin-left: 70px;
+    margin-top: 13px;
+    background-color: #9f3647;
+    color: #ffffff;
+    width: 130px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+}
+.barraDivisora{
+    width: 1100px;
+    margin-top: 30px;
+    margin-left: 90px;
+}
+table {
+    border-collapse: collapse;
+    width: 1140px;
+    margin-left: 70px;
+    background-color: rgb(31, 30, 30);
+}
+th{
+    border-bottom: 1px solid rgb(255, 255, 255);
+    text-align: center;
+}
+td{
+    text-align: center;
+}
+.modificacionTabla{
+    height: 42px;
+}
+.modificacionS{
+    height: 260px;
+}
+.footerEdicion{
+    background-color: #9f3647;
+    height: 30px;
+}
+.modificacionesTable{
+    padding-bottom: 40px;
+    color: #ffffff;
+}
+@media screen and (max-width: 768px){
+    .gestionTexto{
+        font-size: 1rem;
+        padding-left: 40px;
+    }
+    .textoCargar{
+        padding-left: 40px;
+    }
+    .elementosForm{
+        padding-left: 40px;
+        flex-direction: column;
+    }
+    .inputThree{
+        width: 350px;
+    }
+    .inputFour{
+        width: 350px;
+    }
+    .botonAgregar{
+        margin-left: 40px;
+    }
+    .barraDivisora{
+        width: 350px;
+        margin-left: 40px;
+    }
+    table {
+        width: 350px;
+        margin-left: 40px;
+    }
+
+}

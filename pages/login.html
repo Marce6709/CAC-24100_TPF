@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CAC - Movies</title>
+        <link rel="shortcut icon" href="../icon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="../css/styles.css">
+    </head>
+    <body class="bodyLogin">
+        <header class="header">
+            <nav class="nav">
+                <ul class="ul">
+                    <li class="logo">
+                        <a href="../index.html">  
+                            <img class="img" src="../imgs/cine.png" alt="cine">
+                        </a>
+                    </li>
+                </ul>    
+            </nav>
+        </header>
+        <main class="mainLogin">
+            <section class="sectionLogin">
+                <h1>Inicio de sesión</h1>
+                <form id="loginForm" class="formLogin">
+                    <div>
+                        <input class="input" type="email" id="email" name="email" placeholder="Email">
+                        <div id="emailError" class="error-message"></div>
+                    </div>
+                    <div>
+                        <input class="input" type="password" id="password" name="password" placeholder="Contraseña">
+                        <div id="passwordError" class="error-message"></div>
+                    </div>
+                    <div>
+                        <input class="submit" type="submit" value="Iniciar sesión">
+                    </div>
+                </form>
+            </section>
+        </main> 
+        <script src="../js/loginValidation.js"></script> 
+    </body>
+</html>
