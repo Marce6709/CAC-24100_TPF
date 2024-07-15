@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CAC - Movies</title>
+
+        <link rel="stylesheet" href="./styles/styles.css">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+        <link rel="icon" type="image/png" href="./icon.ico">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+            rel="stylesheet">
+    </head>
+
+
+<body>
+    <header class="header">
+        <div class="header_logo">
+            <div class="icon-container">
+                <i class="fa-solid fa-film textoBlanco "></i>
+                <h3 class="textoBlanco">CAC - Movies</h3>
+            </div>
+
+        </div>
+
+        <div class="header_menu">
+            <a href="#Tendencias">Tendencias</a>
+            <a href="./pages/signup.html">Registrarse</a>
+            <a href="./pages/login.html" class="fondoNegro">Iniciar Sesión</a>
+        </div>
+    </header>
+    <main>
+        <section class="main">
+            <h1 class="textoBlanco">Películas y series ilimitadas<br> en un solo lugar</h1>
+            <h2 class="textoBlanco">Disfruta donde quieras.<br> Cancela en cualquier momento</h2>
+            <a href="pages/login.html">
+                <button class="textoBlanco">
+                    Registrate Ahora
+                </button>
+            </a>
+        </section>
+    </main>
+    <section class="form-busqueda">
+        <h2>¿Qué estas buscando para ver?</h2>
+        <form action="./html/resultado-busqueda.html" id="frm">
+            <input type="search" id="buscar" placeholder="Ingrese su búsqueda">
+            <button id="btnBusqueda">
+                Buscar
+            </button>
+        </form>
+    </section>
+<hr>
+
+    <!-- TENDENCIASS -->
+    <hr>
+            <section id="tendencias" class="peliculasTendencia">
+                <h2 class="tituloSection">Las tendencias de hoy</h2>
+                <div class="peliculas" id="tendenciasContainer">   
+                </div>
+                <button id="botonAnterior" class="boton anterior">Anterior</button>
+                <button id="botonSiguiente" class="boton siguiente">Siguiente</button>
+            </section>
+    <hr> 
+
+    </section>
+    <!-- DESTACADASSS -->
+    <section class="destacadas">
+        <h2>Las películas más buscadas</h2>
+        <div class="contenedorscroll">
+            <div class="lista">
+                <img src="./imgs/The dark night.jpg" class="imgD"></i>
+                <img src="./imgs/Goodfellas.jpg"class="imgD"></i>
+                <img src="./imgs/The roommate.jpg"class="imgD"></i>
+                <img src="./imgs/The shawshaw redeption.jpg"class="imgD"></i>
+                <img src="./imgs/Ghostbuster.jpg"class="imgD"></i>
+                <img src="./imgs/Pulp Fiction.jpg"class="imgD"></i>
+                <img src="./imgs/Forrest Gump.jpg"class="imgD"></i>
+                <img src="./imgs/The lord of the rings.jpg"class="imgD"></i>
+                <img src="./imgs/Your name.jpg"class="imgD"></i>
+                <img src="./imgs/Teh godfather parte II.jpg"class="imgD"></i>
+            </div>
+        </div>
+    </section>
+    <!-- volver -->
+    <a href="#" id="inicio-btn">
+        <i class="fa-solid fa-circle-up" id="goBack"></i>
+    </a>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer_items">
+            <a href="#">Términos y condiciones</a>
+            <a href="#">Preguntas frecuentes</a>
+            <a href="#">Ayuda</a>
+            <a href="./pages/administrador.html" class="fondoNegro">Administrador Peliculas</a>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+        <script src="./js/cargar_peliculas_tendencia.js"></script>
+</body>
+
+<script src="https://kit.fontawesome.com/181725805d.js" crossorigin="anonymous"></script>
+
+</html>
